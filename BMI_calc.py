@@ -38,6 +38,14 @@ def convert_feet_inch_to_m(feet, inches):
     height_m = total_inches * 0.025
     return height_m
 
+def web_BMI_calc(weight_lb, height_ft, height_in):
+    weight = int(weight_lb)
+    feet = int(height_ft)
+    inches = int(height_in)
+    BMI = BMI_calc(weight, feet, inches)
+    BMI_category = BMI_calc_category(BMI)
+    return BMI, BMI_category
+
 def main():
     print("Welcome to our BMI Calculator\n")
     while(1):

@@ -24,6 +24,6 @@ def test_BMI_calc_category_overweight(BMI, BMI_category):
     assert BMI_calc_category(BMI) == BMI_category
 
 # [30, infinity) 29.9, 30, 45
-@pytest.mark.parametrize("BMI, BMI_category", [(29.9,"Overweight"), (29,"Obese"), (45, "Obese")])
+@pytest.mark.parametrize("BMI, BMI_category", [(29.9,"Overweight"), (30,"Obese"), (45, "Obese")])
 def test_BMI_calc_category_obese(BMI, BMI_category):
     assert BMI_calc_category(BMI) == BMI_category
