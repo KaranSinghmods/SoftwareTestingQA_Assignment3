@@ -1,13 +1,13 @@
 version: 2.1
 
 jobs:
-  build:
-    working_directory: ~/circleci-python
-    docker:
-      - image: "circleci/python:3.8.3"
-    steps:
-      - checkout
-      - run: python BMI_calc.py
+  # build:
+  #   working_directory: ~/circleci-python
+  #   docker:
+  #     - image: "circleci/python:3.8.3"
+  #   steps:
+  #     - checkout
+  #     - run: python BMI_calc.py
   test:
     working_directory: ~/circleci-python
     docker:
@@ -19,7 +19,8 @@ jobs:
 workflows:
   build_and_test:
     jobs:
-      - build
-      - test:
-          requires:
-            - build
+      - test
+      # - build
+      # - test:
+      #     requires:
+      #       - build
